@@ -754,7 +754,6 @@ func TestImageStreamInOpenshiftNamespace(t *testing.T) {
 		dumpPod(t)
 		t.Fatalf("Config did not stabilize on startup %#v", verifyOperatorUp(t))
 	}
-	verifySecretPresent(t)
 	verifyClusterOperatorConditionsComplete(t, cfg.Status.Version, cfg.Status.ManagementState)
 	t.Logf("Config after TestImageStreamInOpenshiftNamespace: %#v", verifyOperatorUp(t))
 }
